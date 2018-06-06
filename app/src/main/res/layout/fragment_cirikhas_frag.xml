@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context=".fragment.cirikhas_frag">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="C. Ciri khas Anak"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/fisik_nonjol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ciri Fisik yang Menonjol"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/pribadi_nonjol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ciri Pribadi yang Menonjol"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/bakat_nonjol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bakat yang Menonjol"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/prestasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prestasi yang pernah di Raih"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <TextView
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="D. Saudara kandung"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/nama_saudara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nama Saudara kandung"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/jk_saudara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jenis Kelamin"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/pendidikan_saudara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pendidikan"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

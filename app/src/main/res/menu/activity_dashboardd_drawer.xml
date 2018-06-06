@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_user"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_isidata"
+            android:icon="@drawable/ic_receipt"
+            android:title="Isi Data" />
+        <item
+            android:id="@+id/nav_jadwal"
+            android:icon="@drawable/ic_tanggal"
+            android:title="Jadwal" />
+        <item
+            android:id="@+id/nav_nilai"
+            android:icon="@drawable/ic_nilai"
+            android:title="Nilai Test" />
+        <item
+            android:id="@+id/nav_pengumuman"
+            android:icon="@drawable/ic_pengumuman"
+            android:title="Pengumuman" />
+        <item
+            android:id="@+id/nav_daftarulang"
+            android:icon="@drawable/ic_assignment_turned_in_black_24dp"
+            android:title="Daftar Ulang" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_About"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="About" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                android:title="Log Out" />
+        </menu>
+    </item>
+
+</menu>

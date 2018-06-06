@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">AL Amien</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Masuk</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">Alamat email kurang benar</string>
+    <string name="error_invalid_password">Password terlalu pendek</string>
+    <string name="error_incorrect_password">Password salah</string>
+    <string name="error_field_required">Field tidak boleh kosong</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+    <string name="regiter">Belum memilik akun ? </string>
+    <string name="buat">  Daftar disini</string>
+    <string name="username">Username</string>
+    <string name="telp">No Telpon</string>
+    <string name="nama">Nama</string>
+    <string name="repassword">Repeat Password</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_dashboardd">dashboardd</string>
+    <string name="home">Home</string>
+    <string name="profil">Profil</string>
+    <string name="isi">Isi data</string>
+    <string name="jadwal">Jadwal</string>
+    <string name="nilai">Nilai</string>
+    <string name="pengumuman">Pengumuman</string>
+    <string name="daftar">Daftar ulang</string>
+    <string name="keluar">Log Out</string>
+    <string name="point">TK, SD, SMP Yayasan Al Baitul Amien Jember</string>
+    <!-- Strings related to verifyphone -->
+    <string name="text1">Masukkan kode verifikasi lima digit
+    yang akan dikirim ke nomor</string>
+    <string name="text2">Masukkan kode verifikasi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bait"><b>Lembaga Pendidikan Al Baitul Amien Jember</b> \n
+    Paud(TPA-KB-TK)-SD-SMP \n
+    Jl.Raya Sultan Agung no.02 Jember\n
+    Telp. 0331-489948</string>
+    <string name="vimis">Visi dan Misi</string>
+    <string name="isi_visi">Menjadikan generasi yang unggul dalam ilmu dan kebudayaan islam</string>
+    <string name="isi_misi">Mengenalkan dasar-dasar Bahasa Inggris dan arab dalam pembelajaran
+        \nMemupuk rasa afeksi anak melalui kegiatan sosialisasi di dalam dan di luar sekolah
+        \nMelahirkan generasi yang mampu mengenal dasar-dasar membaca dan memahami Al Quran sebagai pedoman hidup setiap insan manusia\n
+        \n
+    </string>
+    <string name="nomor">1. \n\n2. \n\n3. \n\n\n 4.</string>
+    <string name="title_activity_isi_data">isiData</string>
+    <string name="versi">V 1.0.1</string>
+
+
+    <!--isi slider-->
+
+    <string name="slide_1_title">KULINER</string>
+    <string name="slide_1_desc">Rasakan Berbagai Kuliner yang Akan Memanjakan Lidahmu</string>
+
+    <string name="slide_2_title">HOTEL</string>
+    <string name="slide_2_desc">Temukan Hotel yang Nyaman Untuk Istirahat Perjalananmu</string>
+
+    <string name="slide_3_title">WISATA</string>
+    <string name="slide_3_desc">Destinasi Menarik Menantimu. Segera Pilih Destinasi Wisatamu</string>
+
+    <string name="slide_4_title">GUIDE</string>
+    <string name="slide_4_desc">Cari Guide Untuk Menemani Perjalananmu Agar  semakin asyik </string>
+    <string name="selanjutnya">Selanjutnya</string>
+</resources>

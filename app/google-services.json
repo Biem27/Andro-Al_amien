@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "801062160941",
+    "firebase_url": "https://amien-1ca21.firebaseio.com",
+    "project_id": "amien-1ca21",
+    "storage_bucket": "amien-1ca21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801062160941:android:58d162b6194946a7",
+        "android_client_info": {
+          "package_name": "com.example.biem.alamien"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801062160941-b9rnjvuphgcf49oa1n7tbukn24i57pb2.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "801062160941-b9rnjvuphgcf49oa1n7tbukn24i57pb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD751EHI2xPF8nqfLtmnuzvl2CvBi5zN10"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.pengumuman_fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_height="wrap_content">
+            <!--IdPendaftaran-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:text="Id Pendaftaran" />
+                <TextView
+                    android:id="@+id/id_daftar"
+                    android:layout_marginRight="90dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:hint="Belum ada " />
+            </LinearLayout>
+            <!--//Nama siswa-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Siswa" />
+                <TextView
+                    android:id="@+id/nama_siswa"
+                    android:layout_marginRight="90dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:hint="Belum ada " />
+            </LinearLayout>
+            <!--tanggal lahir-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal lahir" />
+                <TextView
+                    android:id="@+id/tanggal_lahir"
+                    android:layout_marginRight="90dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:hint="Belum ada " />
+            </LinearLayout>
+            <!--Asal Sekolah-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:text="Asal Sekolah" />
+                <TextView
+                    android:id="@+id/asal_sekolah"
+                    android:layout_marginRight="90dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:hint="Belum ada " />
+            </LinearLayout>
+            <!--nilai-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:text="Jumalah Nilai" />
+                <TextView
+                    android:id="@+id/nilai"
+                    android:layout_marginRight="90dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:hint="Belum ada " />
+            </LinearLayout>
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#95a5a6"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical"
+                android:background="@color/colorPrimaryDark">
+                <TextView
+                    android:id="@+id/selamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SELAMAT !"
+                    android:textColor="@color/putih"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:textSize="40sp"/>
+                <TextView
+                    android:id="@+id/isi_selamat"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SELAMAT !"
+                    android:layout_gravity="center"
+                    android:textColor="@color/putih"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="center"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <Button
+                android:id="@+id/detail_nilai"
+                android:layout_marginTop="20dp"
+                android:layout_width="140dp"
+                android:textColor="@color/putih"
+                android:background="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Detail Nilai"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

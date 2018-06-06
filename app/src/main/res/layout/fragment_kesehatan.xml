@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context=".fragment.kesehatan_frag">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="D. Kesehatan Anak"/>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <AutoCompleteTextView
+            android:id="@+id/bb_tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bearat badan dan Tinggi Badan"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <AutoCompleteTextView
+            android:id="@+id/goldar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Golonagn Darah"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <AutoCompleteTextView
+            android:id="@+id/minum_asi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lama Minum Asi"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <AutoCompleteTextView
+            android:id="@+id/perkem_2_bulan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Perkembangan dalam 2 bulan"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <AutoCompleteTextView
+            android:id="@+id/kelaina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kelainan Dalam Tubuh"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <AutoCompleteTextView
+            android:id="@+id/makan_tambahan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Makanan Tambahan Sebelum 4 Bulan"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+        <AutoCompleteTextView
+            android:id="@+id/imunisasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Imunisasi yang di berikan"
+            android:maxLines="1"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/alergi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Alergi makanan dan Obat"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/penglihatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Penglihatan"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/pendengaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pendengaran"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/penampilan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Penampilan"
+                android:maxLines="1"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>
