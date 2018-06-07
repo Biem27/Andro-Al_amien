@@ -48,6 +48,10 @@
             </RadioGroup>
 
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true">
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
@@ -55,20 +59,36 @@
                 android:ems="15"
                 android:hint="Email"
                 android:inputType="textEmailAddress"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true">
             <EditText
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="15"
                 android:hint="@string/username"
-                android:inputType="textPersonName" />
+                android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
             <EditText
                 android:id="@+id/telp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="15"
                 android:hint="No Telp"
-                android:inputType="textPassword" />
+                android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
             <EditText
                 android:id="@+id/password"
                 android:layout_width="wrap_content"
@@ -76,7 +96,7 @@
                 android:ems="15"
                 android:hint="@string/prompt_password"
                 android:inputType="textPassword" />
-
+            </android.support.design.widget.TextInputLayout>
             <Button
                 android:onClick="daftar"
                 android:id="@+id/daftar"

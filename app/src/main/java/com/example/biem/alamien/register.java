@@ -124,9 +124,10 @@ public class register extends AppCompatActivity {
                             String succes = jsonObject.getString("succes");
                             if (succes.equals("1")) {
 //                                startActivity(new Intent(getApplicationContext(),bukti_bayar.class));
-                                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-                                finish();
                                 showSnackbar("Data berhasil di input");
+//                                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+//                                finish();
+
                             }else {
                                 showSnackbar("Data gagal di input \n Username sudah ada");
                             }
@@ -140,9 +141,8 @@ public class register extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // error
+                        showSnackbar("error");
                         Log.d("ErrorResponse", finalResponse);
-
-
                     }
                 }
         ) {
