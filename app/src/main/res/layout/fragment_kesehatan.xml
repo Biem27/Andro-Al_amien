@@ -24,25 +24,71 @@
         android:layout_marginTop="15dp"
         android:layout_height="wrap_content">
         <AutoCompleteTextView
-            android:id="@+id/bb_tb"
+            android:id="@+id/bb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Bearat badan dan Tinggi Badan"
+            android:hint="Berat badan"
             android:maxLines="1"
             android:singleLine="true" />
     </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="15dp"
-        android:layout_height="wrap_content">
-        <AutoCompleteTextView
-            android:id="@+id/goldar"
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:id="@+id/tb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tinggi Badan"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+    <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<AutoCompleteTextView-->
+            <!--android:id="@+id/goldar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Golonagn Darah"-->
+            <!--android:maxLines="1"-->
+            <!--android:singleLine="true" />-->
+    <!--</android.support.design.widget.TextInputLayout>-->
+        <TextView
+            android:text="Golongan Darah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Golonagn Darah"
-            android:maxLines="1"
-            android:singleLine="true" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_marginTop="15dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:text="A"
+                android:id="@+id/A"
+                android:layout_width="0px"
+                android:layout_weight="3"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="B"
+                android:id="@+id/B"
+                android:layout_width="0px"
+                android:layout_weight="3"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="AB"
+                android:id="@+id/AB"
+                android:layout_width="0px"
+                android:layout_weight="3"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="O"
+                android:id="@+id/O"
+                android:layout_width="0px"
+                android:layout_weight="3"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_marginTop="15dp"
@@ -152,6 +198,20 @@
                 android:layout_marginBottom="@dimen/activity_horizontal_margin"
                 android:singleLine="true" />
         </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/kefrag5"
+            android:layout_marginTop="14dp"
+            android:layout_width="match_parent"
+            android:text="@string/selanjutnya"
+            android:textColor="@color/putih"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="4/8"/>
     </LinearLayout>
     </ScrollView>
 </FrameLayout>

@@ -52,6 +52,14 @@ public class riwayatsekolah_frag extends Fragment {
         almt_sekolah = nv.findViewById(R.id.alamat_sekolah);
         ksltan = nv.findViewById(R.id.kesulitan);
         aktifitas = nv.findViewById(R.id.aktifitas);
+        gofrag3 = nv.findViewById(R.id.kefrag3);
+
+        gofrag3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clik();
+            }
+        });
         return nv;
     }
     public void showSnackbar(String stringSnackbar){
@@ -79,44 +87,32 @@ public class riwayatsekolah_frag extends Fragment {
         } else if (TextUtils.isEmpty(tahun_m)) {
             showSnackbar("Isi password");
             thn_masuk.setError(getString(R.string.error_field_required));
-            focusView = np;
-            np.requestFocus();
+            focusView = thn_masuk;
+            thn_masuk.requestFocus();
             cancel = true;
-        }else if (TextUtils.isEmpty(usia)) {
+        }else if (TextUtils.isEmpty(tahun_t)) {
             showSnackbar("Isi password");
-            up.setError(getString(R.string.error_field_required));
-            focusView = up;
-            up.requestFocus();
+            thn_tamat.setError(getString(R.string.error_field_required));
+            focusView = thn_tamat;
+            thn_tamat.requestFocus();
             cancel = true;
-        }else if (TextUtils.isEmpty(kwng)) {
+        }else if (TextUtils.isEmpty(alamat_s)) {
             showSnackbar("Isi password");
-            kwn.setError(getString(R.string.error_field_required));
-            focusView = kwn;
-            kwn.requestFocus();
+            almt_sekolah.setError(getString(R.string.error_field_required));
+            focusView = almt_sekolah;
+            almt_sekolah.requestFocus();
             cancel = true;
-        }else if (TextUtils.isEmpty(tgl_)) {
+        }else if (TextUtils.isEmpty(sulit)) {
             showSnackbar("Isi password");
-            tl.setError(getString(R.string.error_field_required));
-            focusView = tl;
-            tl.requestFocus();
+            ksltan.setError(getString(R.string.error_field_required));
+            focusView = ksltan;
+            ksltan.requestFocus();
             cancel = true;
-        }else if (TextUtils.isEmpty(agama)) {
+        }else if (TextUtils.isEmpty(tifitas)) {
             showSnackbar("Isi password");
-            agm.setError(getString(R.string.error_field_required));
-            focusView = agm;
-            agm.requestFocus();
-            cancel = true;
-        }else if (TextUtils.isEmpty(ting)) {
-            showSnackbar("Isi password");
-            tglbr.setError(getString(R.string.error_field_required));
-            focusView = tglbr;
-            tglbr.requestFocus();
-            cancel = true;
-        }else if (TextUtils.isEmpty(ake)) {
-            showSnackbar("Isi password");
-            ak.setError(getString(R.string.error_field_required));
-            focusView = ak;
-            ak.requestFocus();
+            aktifitas.setError(getString(R.string.error_field_required));
+            focusView = aktifitas;
+            aktifitas.requestFocus();
             cancel = true;
         }else{
             signupRequest();
@@ -125,14 +121,15 @@ public class riwayatsekolah_frag extends Fragment {
     }
     private void signupRequest() {
         pd.setVisibility(View.VISIBLE);
-        gofrag2.setVisibility(View.GONE);
+        gofrag3.setVisibility(View.GONE);
 
-        final String nama_p = np.getText().toString().trim();
-        final String nama_l = nl.getText().toString().trim();
-        final String usia = up.getText().toString().trim();
-        final String tgl_ = tl.getText().toString().trim();
-        final String ting = tglbr.getText().toString().trim();
-        final String ake = ak.getText().toString().trim();
+        final String nama_s = nm_sekolah.getText().toString().trim();
+        final String tahun_m = thn_masuk.getText().toString().trim();
+        final String tahun_t = thn_tamat.getText().toString().trim();
+        final String alamat_s = almt_sekolah.getText().toString().trim();
+        final String sulit = ksltan.getText().toString().trim();
+        final String tifitas = aktifitas.getText().toString().trim();
+
 
         SessionManager sessionManager = new SessionManager(getContext());
         HashMap<String, String> user = sessionManager.getUserDetail();
@@ -155,13 +152,13 @@ public class riwayatsekolah_frag extends Fragment {
                             }else {
                                 showSnackbar("Data Gagal input");
                                 pd.setVisibility(View.GONE);
-                                gofrag2.setVisibility(View.VISIBLE);
+                                gofrag3.setVisibility(View.VISIBLE);
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
                             showSnackbar("Data gagal di input");
                             pd.setVisibility(View.GONE);
-                            gofrag2.setVisibility(View.VISIBLE);
+                            gofrag3.setVisibility(View.VISIBLE);
                         }
                     }
                 },
@@ -170,43 +167,21 @@ public class riwayatsekolah_frag extends Fragment {
                     public void onErrorResponse(VolleyError error) {
                         showSnackbar("Data gagal di input, cek koneksimu" + error.toString());
                         pd.setVisibility(View.GONE);
-                        gofrag2.setVisibility(View.VISIBLE);
+                        gofrag3.setVisibility(View.VISIBLE);
                     }
                 })
         {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("nl", nama_l);
-                params.put("np", nama_p);
-                if (wni.isChecked()){
-                    params.put("kewarga", "1");
-                }else {
-                    params.put("kewarga", "2");
-                }
-
-                params.put("usia", usia);
-                params.put("tl", tgl_);
-                if (pr.isChecked()){
-                    params.put("jk", "2");
-                }else {
-                    params.put("jk", "1");
-                }
-                if (islam.isChecked()){
-                    params.put("agama", "1");
-                }else if (kristen.isChecked()){
-                    params.put("agama", "2");
-                }else if (katolik.isChecked()){
-                    params.put("agama", "3");
-                }else if (hindu.isChecked()){
-                    params.put("agama", "4");
-                }else {
-                    params.put("agama", "5");
-                }
-                params.put("tglbr", ting);
-                params.put("ake", ake);
+                params.put("nm_sekolah", nama_s);
+                params.put("thn_masuk", tahun_m);
+                params.put("thn_tsmst", tahun_t);
+                params.put("almt_sekolah", alamat_s);
+                params.put("ksulitan", sulit);
+                params.put("aktifitas", tifitas);
+                params.put("api", "riwayat_sklh");
                 params.put("id_user", mIduser);
-                params.put("api", "datasiswa");
                 return params;
             }
         };
