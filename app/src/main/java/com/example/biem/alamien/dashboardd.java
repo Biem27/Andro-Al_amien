@@ -78,13 +78,10 @@ public class dashboardd extends AppCompatActivity
             return true;
         }else if (id==R.id.keluar){
             // Showing Echo Response Message Coming From Server.
-            Toast.makeText(dashboardd.this, "Logged Out Successfully", Toast.LENGTH_LONG).show();
-            // Closing the current activity.
+            sessionManager.logout();
+            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
             finish();
-            // Redirect to Main Login activity after log out.
-            Intent intent = new Intent(dashboardd.this, LoginActivity.class);
 
-            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

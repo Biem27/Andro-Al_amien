@@ -94,6 +94,20 @@
                     android:maxLines="1"
                     android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
+            <Button
+                android:id="@+id/kefrag3"
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:text="@string/selanjutnya"
+                android:textColor="@color/putih"
+                android:background="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:text="2/8"/>
         </LinearLayout>
     </ScrollView>
 

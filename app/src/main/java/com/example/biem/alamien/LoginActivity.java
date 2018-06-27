@@ -99,9 +99,9 @@ public class LoginActivity extends Activity {
                             String succes = jsonObject.getString("succes");
                             if (succes.equals("1")) {
                                 JSONObject data_user=jsonObject.getJSONObject("data_user");
-                                String id_user = data_user.getString("ID_USER");
-                                String nama_user = data_user.getString("NAMA_USER");
-                                String username = data_user.getString("EMAIL_USER");
+                                String id_user = data_user.getString("id_user");
+                                String nama_user = data_user.getString("nama_user");
+                                String username = data_user.getString("email_user");
                                 String jenjang = data_user.getString("jenjang");
                                 sessionManager.createSession(id_user,nama_user,username,jenjang);
 

@@ -9,10 +9,13 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -20,6 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.biem.alamien.activity.bukti_bayar;
 import com.example.biem.alamien.model.baseUrlApi;
 
 import org.json.JSONException;
@@ -32,6 +36,8 @@ public class register extends AppCompatActivity {
     private EditText email,telp,username,password,repass;
     private RadioButton tk,sd,smp;
     private Snackbar snackbar;
+    private Button btn_daftar;
+    private ProgressBar loading;
     private ProgressDialog pd;
     com.example.biem.alamien.model.baseUrlApi baseUrlApi = new baseUrlApi();
     private String URL = baseUrlApi.getBaseUrl();
@@ -43,7 +49,9 @@ public class register extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //find id
-        pd = new ProgressDialog(register.this);
+        btn_daftar = findViewById(R.id.daftar);
+        loading = findViewById(R.id.loading);
+
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         telp = findViewById(R.id.telp);
@@ -51,6 +59,13 @@ public class register extends AppCompatActivity {
         tk = findViewById(R.id.tk);
         sd = findViewById(R.id.sd);
         smp = findViewById(R.id.smp);
+
+        btn_daftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            clik();
+            }
+        });
     }
     public boolean onOptionsItemSelected(MenuItem item) {
         int t = item.getItemId();
@@ -66,7 +81,7 @@ public class register extends AppCompatActivity {
 
     }
 
-    public void daftar(View view) {
+    public void clik() {
         String user = username.getText().toString();
         String pass = password.getText().toString();
         View focusView = null;
@@ -88,87 +103,74 @@ public class register extends AppCompatActivity {
             focusView = password;
             password.requestFocus();
             cancel = true;
-        } else if (TextUtils.isEmpty(repass.getText())) {
-            showSnackbar("not correct");
-            repass.setError(getString(R.string.error_field_required));
-            focusView = repass;
-            repass.requestFocus();
-            cancel = true;
-//        }else if (!repass.getText().toString().equals(password.getText().toString())){
-//            showSnackbar("not correct");
-//            repass.setError(getString(R.string.error_field_required));
-//            focusView = repass;
-//            repass.requestFocus();
-//            cancel = true;
-//        }
         }else{
             signupRequest();
         }
 
     }
-    private void signupRequest(){
-        pd.setMessage("Signing Up . . .");
-        pd.show();
-        RequestQueue queue = Volley.newRequestQueue(register.this);
-        String response = null;
-        final String finalResponse = response;
+    private void signupRequest() {
+    loading.setVisibility(View.VISIBLE);
+    btn_daftar.setVisibility(View.GONE);
 
-        StringRequest postRequest = new StringRequest(Request.Method.POST, URL+Urlregister,
-                new Response.Listener<String>()
-                {
-                    @Override
-                    public void onResponse(String response) {
-                        pd.hide();
-                        try {
-                            JSONObject jsonObject= new JSONObject(response);
-                            String succes = jsonObject.getString("succes");
-                            if (succes.equals("1")) {
+    final String email = this.email.getText().toString().trim();
+    final String telp = this.telp.getText().toString().trim();
+    final String username = this.username.getText().toString().trim();
+    final String password = this.password.getText().toString().trim();
+
+    StringRequest stringRequest = new StringRequest(Request.Method.POST, URL + Urlregister,
+            new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    String succes = jsonObject.getString("succes");
+                    if (succes.equals("1")) {
 //                                startActivity(new Intent(getApplicationContext(),bukti_bayar.class));
-                                showSnackbar("Data berhasil di input");
-//                                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-//                                finish();
-
-                            }else {
-                                showSnackbar("Data gagal di input \n Username sudah ada");
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+                        showSnackbar("Data berhasil di input");
+                                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                                finish();
+                    }else {
+                        showSnackbar("Username Telah ada");
+                        loading.setVisibility(View.GONE);
+                        btn_daftar.setVisibility(View.VISIBLE);
                     }
-                },
-                new Response.ErrorListener()
-                {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        // error
-                        showSnackbar("error");
-                        Log.d("ErrorResponse", finalResponse);
-                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    showSnackbar("Data gagal di input");
+                    loading.setVisibility(View.GONE);
+                    btn_daftar.setVisibility(View.VISIBLE);
                 }
-        ) {
-            @Override
-            protected Map<String, String> getParams()
-            {
-                Map<String, String>  params = new HashMap<String, String>();
-
-                params.put("username", username.getText().toString());
-                params.put("password", password.getText().toString());
-                params.put("email", email.getText().toString());
-                params.put("no_telp", email.getText().toString());
-                if (tk.isChecked()) {
-                    params.put("jenjang","46127");
-                }else if (sd.isChecked()){
-                    params.put("jenjang","46128");
-                }else if (smp.isChecked()){
-                    params.put("jenjang","46128");
                 }
-                params.put("api", "register");
-                return params;
+            },
+            new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    showSnackbar("Data gagal di input" + error.toString());
+                    loading.setVisibility(View.GONE);
+                    btn_daftar.setVisibility(View.VISIBLE);
+                }
+            })
+    {
+        @Override
+        protected Map<String, String> getParams() throws AuthFailureError {
+            Map<String, String> params = new HashMap<>();
+            params.put("username", username);
+            params.put("password", password);
+            params.put("email", email);
+//            params.put("no_telp", telp);
+            if (tk.isChecked()) {
+                params.put("jenjang","1");
+            }else if (sd.isChecked()){
+                params.put("jenjang","2");
+            }else if (smp.isChecked()){
+                params.put("jenjang","3");
             }
-        };
-        postRequest.setRetryPolicy(new DefaultRetryPolicy(0, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-        queue.add(postRequest);
-
+            params.put("api", "register");
+            return params;
+        }
+    };
+    RequestQueue requestQueue = Volley.newRequestQueue(this);
+    requestQueue.add(stringRequest);
     }
 }
 
